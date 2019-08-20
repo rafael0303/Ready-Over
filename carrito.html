@@ -1,0 +1,110 @@
+<html lang="mx">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/carrito.css?ver=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<title>Carrito</title>
+</head>
+
+<script>
+	function start(){
+		window.id_user;
+		let liEmail = document.getElementById('liEmail');
+		$.ajax({
+        	url: 'verificarSesion.php',
+        	type: 'GET',
+        	success: function(response){
+				if(response == ''){
+					liEmail.innerHTML = `<a href="login.php">Login</a>`;
+					conexion = false;
+				}else{
+					user = JSON.parse(response);			
+					id_user = user.id;
+					listarItems(id_user);
+					liEmail.innerHTML = `<a href="logout.php">Bienvenido: ${user.email}</a>`;
+					conexion = true;
+				}				  
+        	}
+		});
+		
+	}
+
+
+</script>
+
+<body onload="start();">
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="noticias.php">Noticias</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li id="liEmail"></li>
+        </ul>
+    </nav>
+	<center><h1>Carrito de compras</h1></center>
+
+	<div class="container">	
+		<table>
+			<thead>
+				<tr>
+					<th id="head">Imagen</th><th id="head">Producto</th><th id="head">Precio Unitario</th><th id="head">Cantidad</th><th id="head">Sub-total</th><th id="head">Remover</th>
+				</tr>
+			</thead>
+			<tbody id="listItems"></tbody>
+		</table>
+
+	</div>
+
+	<div class="final">
+		<div class="informacion">
+			<h1>Compra segura</h1>
+			<h1>Necesitas ayuda? Llámanos al 834-168-3946</h1>
+		</div>
+		<div class="finalizar">
+			<div class="subTotal" id="subTotal">
+				
+			</div>
+			<div class="total" id="total">
+				
+			</div>
+			<br>
+				<div class="comprar">
+					<div class="ahora">
+						<a href="" onclick="comprar()">Comprar Ahora</a>
+					</div>
+					
+				</div>
+				
+		</div>
+	</div>
+	<br>
+<footer id="footer-main">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="shared-panel">
+                    <span>Redes sociales</span><br>
+                        <a target="_blank" class="shared fb" title="Facebook"></a>    
+                        <a target="_blank" class="shared tt" title="Twitter"></a>
+                        <a target="_blank" class="shared gp" title="Google+"></a>
+                        <a  data-action='share/whatsapp/share' class="shared wa" title="WhatsApp"></a>
+                        <a target="_blank" class="shared ce" id="sml" title="Email"></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <h6>Info</h6>                    
+                    <p>El mejor lugar para comparar y saber nuevas noticias de los videojuegos donde más que solo aqui.</p>
+                </div>
+            </div>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+				crossorigin="anonymous"></script>
+
+	<script src="js/listarItems.js"></script>
+</body>
+</html>
