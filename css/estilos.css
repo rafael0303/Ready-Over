@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+}
+
+
+img {
+    max-width: 100%;
+    margin:10px auto;
+}
+
+.carousel-inner img{
+    height: 500px;
+    width: 900px;
+}
+
+.row img{
+    height: 200px;
+    width: 200px;
+}
+
+
+/* cover */
+#cover {
+    background: #222 url('../img/ps4-xbox.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#cover-texto {
+    width: 100%;
+    
+}
+
+#cover-texto .form-inline{
+    width: 100%;
+}
+
+.contenido-seccion {
+    padding: 5rem 0;
+}
+
+#acerca-de {
+    background: #222 url('../img/354583-admin.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.texto-acerca-de, .contenedor {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 1.875rem;
+}
+
+
+#footer-main {
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 1.5rem 0;
+}
+
+
+blockquote{
+    font:  sans-serif;
+    font-family: "Platino", sans-serif;
+    text-align: justify;
+    max-width: 65rem;
+        margin: 0rem auto 1.5rem auto;
+        line-height: 1.563rem;
+}
+
+p{
+        max-width: 65rem;
+        margin: 0rem auto 1.5rem auto;
+        line-height: 1.563rem;
+}
+
+.shared-panel{
+    overflow: auto;
+}
+.shared-panel span{
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.shared {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    margin: 5px 0; 
+    padding: 0; 
+    background: url("shared.png") no-repeat; 
+    float: left;
+    margin-right: 5px; 
+    cursor: pointer;
+    border-radius: 50%;
+}
+.shared:hover{
+    opacity: 0.7;
+}
+.shared.gp {background-position: 0px 0px; background-color: #E62B34;}
+.shared.tt {background-position: 0px -30px; background-color: #43BDF0;}
+.shared.ce {background-position: 0px -60px; background-color: #8A898D;}
+.shared.wa {background-position: 0px -90px; background-color: #0dc143;}
+.shared.fb {background-position: 0px -120px; background-color: #6081C4;}
+
+.st2{border-radius: 0;}
+.st3{border-radius: 5px;}

@@ -1,0 +1,98 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+.container{
+	margin:2%;
+	padding: 2%;
+	display: flex;
+}
+ table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td{
+	text-align: center;
+}
+
+th{
+	background-color: #000;
+	color: #f0f0f0;
+}
+#head{
+	text-align: center;
+}
+.imagen{
+	width: 10%;
+}
+.imagen img{
+	width: 100%;
+}
+.titulo{
+	width: 45%;
+	font-size: 30px;
+}
+.precio{
+	width: 15%;
+	text-align: center;
+}
+.cantidad{
+	width: 15%;
+	padding: 50px;
+	text-align: center;
+}
+.sub_total{
+	width: 15%;
+	text-align: center;
+}
+tr:nth-child(even){
+	background-color: #f0f0f0;
+}
+.final{
+	width: 80%;
+	margin-left: 10%;
+	display: flex;
+}
+.informacion{
+	width: 50%;
+	background-color: #f4f6f9;
+	box-shadow: rgba(0,0,0,0.4) 5px 5px 5px 0px;
+	padding: 5%;
+}
+.finalizar{
+	padding: 5%;
+	width: 50%;
+	background-color: green;
+	box-shadow: rgba(0,0,0,0.4) 5px 5px 5px 0px;
+	color: white;
+}
+.subTotal{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.subTotal h2{
+	margin-right: 50px;
+}
+.total{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.total h1{
+	margin-right: 50px;
+}
+.comprar{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ahora{
+	background-color: white;
+    padding: 15px;
+}
+.ahora a{
+	text-decoration: none;
+}
